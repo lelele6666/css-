@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对未知个数文本实现两端对齐</title>
+    <style>
+            li {
+                margin-top: 5px;
+                padding: 0 20px;
+                width: 100px;
+                height: 40px;
+                background-color: red;
+                line-height: 40px;
+                /* 让文字对齐 */
+                text-align-last: justify;
+                color: #fff;
+            }
+            li:first-child{
+                margin-top: 0px;
+            }
+    </style>
+</head>
+<body>
+        <ul class="justify-text">
+                <li>账号</li>
+                <li>密码</li>
+                <li>电子邮件</li>
+                <li>通讯地址</li>
+        </ul>
+</body>
+</html>
