@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pointer-events来阻止鼠标事件</title>
+    <style>
+        .disabled-trigger {
+            padding: 0 20px;
+            border-radius: 10px;
+            height: 40px;
+            background-color: purple;
+            pointer-events: none;
+            line-height: 40px;
+            color: #fff;
+        }
+        /* .disabled-trigger:hover{
+            cursor: pointer;
+        } */
+
+    </style>
+</head>
+<body>
+    <!-- 通过pointer-events:none禁用事件触发(默认事件、冒泡事件、鼠标事件、键盘事件等)，相当于<button>的disabled
+    场景：限时点击按钮(发送验证码倒计时)、事件冒泡禁用(多个元素重叠且自带事件、a标签跳转) -->
+    <a class="disabled-trigger" href="https://www.baidu.com">点我</a>
+</body>
+</html>
