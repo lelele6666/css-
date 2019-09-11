@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用transform绘制边框</title>
+    <style>
+        .onepx-border {
+            margin-top: 10px;
+            width: 200px;
+            height: 80px;
+            cursor: pointer;
+            line-height: 80px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 50px;
+            color: red;
+	
+}
+.normal {
+	border: 1px solid red;
+}
+.thin {
+	position: relative;
+}
+.thin::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		border: 1px solid red;
+		width: 200%;
+		height: 200%;
+		content: "";
+		transform: scale(.5);
+		transform-origin: left top;
+	}
+    </style>
+</head>
+<body>
+    <!-- 分辨率比较低的屏幕下显示1px的边框会显得模糊，通过::before或::after和transform模拟细腻的1px边框 -->
+        <div class="onepx-border normal">1px</div>
+        <div class="onepx-border thin">0.5px</div>
+</body>
+</html>
