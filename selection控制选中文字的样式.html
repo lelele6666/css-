@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>selection控制选择文字的样式</title>
+    <style>
+    ::selection {
+            background-color: purple;
+            color: #fff;
+    }
+    .select-color {
+        line-height: 50px;
+        font-weight: bold;
+        font-size: 30px;
+        color: red;
+    }
+    .special::selection {
+        background-color: green;
+    }
+    </style>
+</head>
+<body>
+        <div class="select-color">
+                <p>全局选择文字颜色</p>
+                <p>全局选择文字颜色</p>
+                <p class="special">局部选择文字颜色</p>
+        </div>
+</body>
+</html>
