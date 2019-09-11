@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用max-height切换自动高度</title>
+    <style>
+        .auto-height {
+	     width: 300px;
+        }
+	li {
+		margin-top: 5px;
+		cursor: pointer;
+	}
+    li:hover p{
+        border-bottom-width: 1px;
+		max-height: 600px;
+    }
+	h3 {
+		padding: 0 20px;
+		height: 40px;
+		background-color: red;
+		cursor: pointer;
+		line-height: 40px;
+		font-size: 16px;
+		color: #fff;
+	}
+	p {
+        margin-top: -15px;
+		overflow: hidden;
+		padding: 0 20px;
+		border: 1px solid red;
+		border-top: none;
+		border-bottom-width: 0;
+		max-height: 0;
+		line-height: 30px;
+		transition: all 500ms;
+	}
+
+    </style>
+</head>
+<body>
+        <ul class="auto-height">
+                <li>
+                    <h3>列表1</h3>
+                    <p>内容1<br>内容2<br>内容3<br>内容4</p>
+                </li>
+                <li>
+                    <h3>列表2</h3>
+                    <p>内容1<br>内容2<br>内容3<br>内容4</p>
+                </li>
+                <li>
+                    <h3>列表3</h3>
+                    <p>内容1<br>内容2<br>内容3<br>内容4</p>
+                </li>
+        </ul>
+</body>
+</html>
