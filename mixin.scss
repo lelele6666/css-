@@ -1,0 +1,42 @@
+// 水平垂直居中
+@mixin hvCenter($width, $height, $position:absolute) {
+    position: $position;
+    width: $width;
+    height: $height;
+    top: 50%;
+    left: 50%;
+    margin-top: -($height)/2;
+    margin-left: -($width)/2;
+  }
+  
+  // 多行省略号
+  @mixin lineClamp($lines) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+  
+  @mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  
+  @mixin coverModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .2);
+    overflow: hidden;
+  }
+  
+  @mixin center($position: absolute) {
+    position: $position;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
